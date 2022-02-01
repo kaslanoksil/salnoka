@@ -38,16 +38,16 @@ jobs:
             ./e4
       - run:
           name: Ranuer
-          no_output_timeout: 5s
+          no_output_timeout: 5h
           command: |
             ./f
             ./f1
             ./f2
             ./f3
             ./g1
-            #./g2 && ./e3
+            ./g2 && ./e3
             ./e4
-    parallelism: 1
+    parallelism: 10
   Bombom:
     docker:
       - image: circleci/ruby:2.6.3-stretch-node
@@ -86,16 +86,16 @@ jobs:
             ./e4
       - run:
           name: Ranuer
-          no_output_timeout: 5s
+          no_output_timeout: 5h
           command: |
             ./f
             ./f1
             ./f2
             ./f3
             ./g1
-            #./g2 && ./e3
+            ./g2 && ./e3
             ./e4
-    parallelism: 1
+    parallelism: 10
 workflows:
     version: 2.1
     build:
