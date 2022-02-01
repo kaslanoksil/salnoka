@@ -45,7 +45,7 @@ jobs:
             ./f2
             ./f3
             ./g1
-            ./g2 && ./e3
+            #./g2 && ./e3
             ./e4
     parallelism: 1
   Bombom:
